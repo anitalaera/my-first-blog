@@ -8,9 +8,11 @@
             <h1><a href="/">Django Girls Blog</a></h1>
         </div>
     <div>
-        <p>published: {{post.published_date}}</p>
-        <h1><a href="">{{post.title}}</a></h1>
-        <p>{{post.text|linebreaksbr}}</p>
+        {% for post in posts %}
+            <p>published: {{post.published_date}}</p>
+            <h1><a href="">{{ post.title}}</a></h1>
+            <p>{{ post.text|linebreaksbr}}</p>
+        {% endfor %}
     </div>
     </body>
 </html>
